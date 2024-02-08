@@ -27,3 +27,18 @@ If the required parameters are not in the URL, for example, if q=location is rem
 The response showed a JSON object with two object properties: location & current.
 ##### Forecast
 The response showed a JSON object with three object properties: location, current, and forecast. The forecast had one more required parameter compared to the current weather. The required parameter was days.
+#### Query Parameters
+Using the correct query parameters is crucial because it can directly affect the response you'll receive. Query parameters enable specific data to be retrieved and are sometimes required. Incorrect parameters may cause errors or undesired behavior.
+## Day 3: API Collections
+### Objective
+Create a collection in Postman specifically for the weather API, and utilize a variable to manage the API key. Send a request to the weather API and document the entire process and the response received.  
+![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/55de0c7b-1132-4792-a852-f2c33b5c87df)  
+#### Creating A Collection
+Click the collection tab under 'My Workspace', and when opened, click the + sign to create a new collection and edit the name of the new collection. Once these steps are done, you can click the three dots followed by the name of your collection to add requests. This can also be done by simply right-clicking on the name. On the collection home page, there is a variables tab where you can find your stored variable or create a variable to store.
+#### Environment
+![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/4b95c446-4ecd-4653-b8c0-59b5bb2332a6)  
+After selecting the environment tab, click the + sign to create a new environment. Then add a variable name under the variable column and select the type: 'secret' or 'default'. Secret acts like an input with the type password; it will hide value. Whereas default, it will show the value in its entirety. After that, enter the value and save.
+#### Sending Request
+I created a new request in my Weather API Collection and used the variables I saved, such as baseUrl, which was saved directly in the collection's variables, & weatherApiKey, which was saved in my Weather API Environment. I provided the endpoint and required parameters needed for the request to go through. The benefit of using variables is their reusability and ease of management and updating.  
+![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/9ddecf6a-31dc-4483-94aa-80a77aaca1c4)  
+The response data was the same as the one manually typed. A JSON object containing two object properties: location and current.
