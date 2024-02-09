@@ -42,3 +42,14 @@ After selecting the environment tab, click the + sign to create a new environmen
 I created a new request in my Weather API Collection and used the variables I saved, such as baseUrl, which was saved directly in the collection's variables, & weatherApiKey, which was saved in my Weather API Environment. I provided the endpoint and required parameters needed for the request to go through. The benefit of using variables is their reusability and ease of management and updating.  
 ![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/9ddecf6a-31dc-4483-94aa-80a77aaca1c4)  
 The response data was the same as the one manually typed. A JSON object containing two object properties: location and current.
+## Day 4: Interacting with Github's API
+### Objective
+Utilize Postman to interact with GitHub's API by retrieving user information and creating a new repository. Document the entire process, including the request setup and the response in your README.md file, accompanied by appropriate screenshots.
+#### Retrieving User Information
+![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/e3706af8-c8e4-470e-bfe4-cf2137beabb5)  
+After creating a new collection, I set the base URL to the variable baseUrl in the collection's variables tab. Then I created a new environment and saved my access token to a variable set to secret. I made sure to save it and set the environment to active. In my collection's authorization tab, I selected 'Bearer Token' and used the variable I saved in the environment tab as the token's value. Once all of this was done, I added a request using the baseUrl variable, followed by user. The authorization tab for this request was set to 'Inherit from parent'.
+#### Creating a New Repository
+![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/69122f45-bd56-422b-8a36-a7fb1d401420)  
+The foundation was already set to create a new repository: the bearer token, base URL, & user. After creating a new request under the collection, I switch the request method from GET to POST.  
+The URL: {{baseUrl}}user/repos.  
+The authorization tab was set to 'Inherit from parent'. The only difference between retrieving info and creating a new repo was having to create a JSON object with the required parameters in the request's body tab. Once this was done and the request was sent, I received a 201 created status and the JSON object, which contained the name of the created repo, owner info, URL, description, etc.
