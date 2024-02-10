@@ -53,3 +53,16 @@ After creating a new collection, I set the base URL to the variable baseUrl in t
 The foundation was already set to create a new repository: the bearer token, base URL, & user. After creating a new request under the collection, I switch the request method from GET to POST.  
 The URL: {{baseUrl}}user/repos.  
 The authorization tab was set to 'Inherit from parent'. The only difference between retrieving info and creating a new repo was having to create a JSON object with the required parameters in the request's body tab. Once this was done and the request was sent, I received a 201 created status and the JSON object, which contained the name of the created repo, owner info, URL, description, etc.
+## Day 5: Thunder Client
+### Objective
+The objective of this assignment is to replicate the tasks completed on Day 4, but this time using Thunder Client in VS Code. This will provide hands-on experience with an alternative API testing tool and offer insights into the differences and similarities between Thunder Client and Postman.  
+#### Setting Up
+Created a collection called Github API & an environment called Github. Saved access token to variable in the environment. In the collections settings, under the options tab, I saved the base URL. In the same settings under the Auth tab, I place the variable for my token. To go a step farther, in the settings environment tab, I attached the Github environment I created to the collection.
+#### Retrieving User Information
+![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/c0cc05b3-8b1d-41fe-bf86-c2866a296a14)  
+With the steps above completed, I created a new request in the collection called 'User'. The request method was set to GET, and since the previous steps were taken, all I had to do was type the endpoint 'user' & hit send.  
+#### Creating a Repository
+![image](https://github.com/Laqwanda-Nettles/postman-reflection/assets/147118788/da8a09a2-72e7-4dca-b53e-87475d8d6d2f)  
+Created a new request under the collection, set the request method to POST, and entered the endpoints 'user/repos'. Then I clicked the Body tab and typed the required parameters in JSON format. Once the request was sent, I received a 201 created status.
+#### Thoughts on Thunder Client
+It's convenient because of the ability to access it directly in VS Code. The steps were very similar to Postman, but the collection settings feature was nice. For example, you could plug in the base URL directly in the collection settings without having to create a variable for it. However, I prefer the auto-complete feature on Postman. In summary, I find both Postman & Thunder Client to be powerful tools for testing APIs.
